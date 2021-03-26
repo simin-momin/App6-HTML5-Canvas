@@ -92,11 +92,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	function insert_image(){
 		var a_canvas = document.getElementById("myCanvas");
 		var a_context = a_canvas.getContext("2d");
-		var img = new Image();
-		img.src = "sunflower.jpg";
-		img.onload = function() {
-		a_context.drawImage(img, 0, 0);
-		};
+		var sunflower = new Image();
+		sunflower.src = "sunflower.jpg";
+		sunflower.onload = function() {
+			a_context.drawImage(sunflower, 0, 0);
+			};
+	}
 	</script>
 	
 	<script>
