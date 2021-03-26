@@ -39,6 +39,17 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
       <link rel="stylesheet" href="w3.css">
       <link rel="stylesheet" href="w3-colors-flat.css">
    </head> 
+	
+<script>
+
+	var docMod = document.lastModified; // loads last modified time stamp into docMod variable
+	alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
+	console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 	
+	</script>
+	
+	<script>
+	var a_canvas = document.getElementById("myCanvas");
+</script>
 
 <style>	
 .body {
@@ -60,23 +71,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 }
 </style>
 
-
-<script>
-
-	var docMod = document.lastModified; // loads last modified time stamp into docMod variable
-	alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
-	console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 	
-	</script>
-	
-	<script>
-	var a_canvas = document.getElementById("myCanvas");
-	</script>
-	
 	<script>
 	function draw_b() {
-		var b_canvas = document.getElementById("myCanvas");
-		var b_context = b_canvas.getContext("2d");
-		b_context.fillRect(50, 25, 150, 100);
+		var a_canvas = document.getElementById("myCanvas");
+		var a_context = a_canvas.getContext("2d");
+		a_context.fillRect(50, 25, 150, 100);
 		}
 	</script>
 	
@@ -85,25 +84,25 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		var c = document.getElementById("myCanvas");
 		var ctx = c.getContext("2d");
 		ctx.font = "30px Arial";
-		ctx.fillText("Simin Momin", 150, 150);
+		ctx.fillText("Simin Momin", 10, 50);
 		}
 	</script>
 	
 	<script>
 	function insert_image(){
-		var c = document.getElementById("myCanvas");
-		var ctx = c.getContext("2d");
+		var a_canvas = document.getElementById("myCanvas");
+		var a_context = a_canvas.getContext("2d");
 		var img = new Image();
 		img.src = "https://media.istockphoto.com/vectors/sunflower-flower-isolated-vector-id927047528?k=6&m=927047528&s=612x612&w=0&h=KZZ734lZ6zsEtw7zwi9QaSIsIXaQ9Us-mLTZ-AFSTPA=";
 		img.onload = function() {
-		ctx.drawImage(img, 0,0,25,25);
-		}
+		a_context.drawImage(img, 0, 0);
+		};
 	</script>
 	
 	<script>
 	function clear_canvas(){	
-		var b_canvas = document.getElementById("myCanvas");
-		b_canvas.width = b_canvas.width;
+		var a_canvas = document.getElementById("myCanvas");
+		a_canvas.width = a_canvas.width;
 		}
 			
 </script>
