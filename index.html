@@ -40,46 +40,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
       <link rel="stylesheet" href="w3-colors-flat.css">
    </head> 
 
-
-<script>
-
-	var docMod = document.lastModified; // loads last modified time stamp into docMod variable
-	alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
-	console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 	
-
-	var a_canvas = document.getElementById("myCanvas");
-	
-	function draw_b() {
-		var a_canvas = document.getElementById("myCanvas");
-		var a_context = a_canvas.getContext("2d");
-		a_context.fillRect(50, 25, 150, 100);
-		}
-	
-	function draw_text() {
-		var c = document.getElementById("myCanvas");
-		var ctx = c.getContext("2d");
-		ctx.font = "30px Arial";
-		ctx.fillText("Simin Momin", 100, 100);
-		}
-	
-	function draw_image() {
-		var c = document.getElementById("myCanvas")
-		var ctx = c.getContext("2d");
-		var img = new Image();
-		img.src = "https://media.istockphoto.com/vectors/sunflower-flower-isolated-vector-id927047528?k=6&m=927047528&s=612x612&w=0&h=KZZ734lZ6zsEtw7zwi9QaSIsIXaQ9Us-mLTZ-AFSTPA=";
-		img.onload = function() {
-		ctx.drawImage(img, 75,50,200,175);
-		}
-		
-	function clear_canvas() {
-		var a_canvas = document.getElementById("myCanvas");
-		a_canvas.width = a_canvas.width;
-		}
-		
-	
-</script>
-
-
 <style>	
 .body {
      margin: 0em;
@@ -100,6 +60,46 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 }
 </style>
 
+
+<script>
+
+	var docMod = document.lastModified; // loads last modified time stamp into docMod variable
+	alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
+	console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 	
+
+	var a_canvas = document.getElementById("myCanvas");
+	
+	function draw_rectangle(){
+		var a = document.getElementById("myCanvas");
+		var atx = a.getContext("2d");
+		atx.fillRect(50, 25, 150, 100);
+		}
+	
+	function draw_text(){
+		var b = document.getElementById("myCanvas");
+		var btx = b.getContext("2d");
+		btx.font = "30px Arial";
+		btx.fillText("Simin Momin",100,100);
+		}
+	
+	function draw_image() {
+		var c = document.getElementById("myCanvas")
+		var ctx = c.getContext("2d");
+		var img = new Image();
+		img.src = "https://media.istockphoto.com/vectors/sunflower-flower-isolated-vector-id927047528?k=6&m=927047528&s=612x612&w=0&h=KZZ734lZ6zsEtw7zwi9QaSIsIXaQ9Us-mLTZ-AFSTPA=";
+		img.onload = function() {
+		ctx.drawImage(img, 75,50,200,175);
+		}
+		
+	function clear_canvas(){
+		var a = document.getElementById("myCanvas");
+		a.width = a.width;
+		}
+		
+	
+</script>
+
+
 	
 <body>
 	<div id="header" class="w3-container w3-flat-carrot">
@@ -114,9 +114,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<canvas id="myCanvas" width="350" height="300" style="border:1px solid #000000;">
 	</canvas>
 		
-	<p><a onclick="draw_b();" class="w3-btn w3-black"> Draw rectangle </a><p>
-	<p><a onclick="draw_Text();" class="w3-btn w3-black"> Write Name </a><p>
-	<p><a onclick="draw_Image();" class="w3-btn w3-black"> Insert image </a><p>
+	<p><a onclick="draw_rectangle();" class="w3-btn w3-black"> Draw rectangle </a><p>
+	<p><a onclick="draw_text();" class="w3-btn w3-black"> Write Name </a><p>
+	<p><a onclick="draw_image();" class="w3-btn w3-black"> Insert image </a><p>
 	<p><a onclick="clear_Canvas();" class="w3-btn w3-black"> Clear canvas </a><p>
 		
 </div>
