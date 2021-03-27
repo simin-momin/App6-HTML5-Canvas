@@ -48,9 +48,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</script>
 	
 	<script>
-	var a_canvas = document.getElementById("myCanvas");
+	var a_canvas = document.getElementById("myCanvas");//defines variable "myCanvas" for the canvas
 </script>
 
+<!--the styling of the page -->
 <style>	
 .body {
      margin: 0em;
@@ -72,38 +73,41 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </style>
 
 	<script>
-	function draw_b() {
-		var a_canvas = document.getElementById("myCanvas");
-		var a_context = a_canvas.getContext("2d");
-		a_context.fillRect(10, 25, 150, 100);
+	//code for drawing a rectangle
+	function draw_b() {//function that draws a rectangle 
+		var a_canvas = document.getElementById("myCanvas");//this variable calls the canvas
+		var a_context = a_canvas.getContext("2d");//this prints the rectangle in 2d
+		a_context.fillRect(10, 25, 150, 100);//(x,y,width, height)-coordinates and weight and height of the rectangle
 		}
 	</script>
 	
 	<script>
-	function draw_text(){
-		var c = document.getElementById("myCanvas");
-		var ctx = c.getContext("2d");
-		ctx.font = "25px Arial";
-		ctx.fillText("Simin Momin", 70, 160);
+	//code for writing my name
+	function draw_text(){//function that writes my name
+		var c = document.getElementById("myCanvas");//calls the canvas
+		var ctx = c.getContext("2d");//writes name in 2d
+		ctx.font = "25px Arial";//sets the size and font of my name
+		ctx.fillText("Simin Momin", 70, 160);//writes my name on the coordinates written (x,y)
 		}
 	</script>
 	
 	<script>
-	function insert_image(){
-		var a_canvas = document.getElementById("myCanvas");
-		var a_context = a_canvas.getContext("2d");
-		var img = new Image();
-		img.src = "sunflower.jpg";
-		img.onload = function() {
-			a_context.drawImage(img, 200,5,70,70);
+	//code for inserting the image
+	function insert_image(){//function that inserts the image on canvas
+		var a_canvas = document.getElementById("myCanvas");//calls the canvas
+		var a_context = a_canvas.getContext("2d");//prints the image in 2d
+		var img = new Image();//creates a variable "img" that is set equal to the new variable for image
+		img.src = "sunflower.jpg";//loads the image file in .jpg and stores it under the src variable
+		img.onload = function() {//loads the image onto canvas
+			a_context.drawImage(img, 200,5,70,70);//determines where the image will be placed on the canvas(x, y, width, height)
 			};
 	}
 	</script>
 	
 	<script>
-	function clear_canvas(){	
-		var a_canvas = document.getElementById("myCanvas");
-		a_canvas.width = a_canvas.width;
+	function clear_canvas(){//function that clears the canvas 	
+		var a_canvas = document.getElementById("myCanvas");//calls the canvas
+		a_canvas.width = a_canvas.width;//clears everything within the box 
 		}
 			
 </script>
@@ -112,31 +116,37 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 <body>
 	<div id="header" class="w3-container w3-flat-carrot">
-	<h1>App6: HTML5-Canvas</h1>
+	<h1>App6: HTML5-Canvas</h1> <!--page header-->
 
 	</div>	
 	<div id="content" class="w3-container">
-		<p>Click the buttons to draw on this canvas!</p>	
+		<p>Click the buttons to draw on this canvas!</p> <!--text that appears above the canvas-->	
 		<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin. This code is shared for demonstration purposes and should not be considered a product, it is for entertainment purposes only. Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  		<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p> 
 	
 	<canvas id="myCanvas" width="300" height="190" style="border:1px solid #000000;">
-	</canvas>
-	
+	</canvas> 
+	<!--this function creates the black border which will surround the rectangle, text and image-->
+		
+		
 </div>
 	<a onclick="draw_b();" class="w3-btn w3-black">Draw Rectangle</a>
+	<!--button that allows the rectangle to be drawn when pressed-->
 	</div>
 	<a onclick="draw_text();" class="w3-btn w3-black">Write Name</a>
+	<!--button that writes my name when pressed-->
 	</div>
 	<a onclick="insert_image();" class="w3-btn w3-black">Insert Image</a>
+	<!--button that displays the image when pressed-->
 	</div>
 	<a onclick="clear_canvas();" class="w3-btn w3-black">Clear Canvas</a>
+	<!--button that clears the canvas when pressed-->
 </div>
 	
 	
 </div>
 
-<footer class="w3-bottom w3-container w3-flat-carrot">
+<footer class="w3-bottom w3-container w3-flat-carrot"><!--footer-->
 		
 	<p>DIY!</p>
 </footer>
